@@ -8,7 +8,7 @@ class WebServerStateTests(unittest.TestCase):
     url = f'http://localhost:{port}/api/state'
 
     def test_server_state(self):
-        start_server()
+        start_server() #Тут запускается сервер для дальнейшего тестирования
         response = requests.get(self.url)
         self.assertEqual(response.status_code, 200, "Неверный код ответа сервера")
         self.assertTrue("state" in response.json(), "Отсутствует ключ 'state' в ответе")
