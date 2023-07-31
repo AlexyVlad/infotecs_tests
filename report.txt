@@ -41,7 +41,7 @@ test_zero_number (remainder_tests.WebCalculatorRemainderTests.test_zero_number) 
 FAIL: test_server_state (state_tests.WebServerStateTests.test_server_state)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "D:\pycharmPbjects\infotecs_tests\state_tests.py", line 21, in test_server_state
+  File "D:\pycharmObjects\infotecs_tests\state_tests.py", line 21, in test_server_state
     self.assertEqual(response.encoding, 'cp1251', "Неверная кодировка ответа")
 AssertionError: 'utf-8' != 'cp1251'
 - utf-8
