@@ -1,4 +1,4 @@
-(rg) D:\pycharmPbjects\infotecs_tests>python tests.py
+(rg) D:\pycharmObjects\infotecs_tests>python tests.py
 test_change_port (management_tests.WebAppManagementTests.test_change_port) ... ok
 test_default_value_localhost_port (management_tests.WebAppManagementTests.test_default_value_localhost_port) ... ok
 test_default_value_port (management_tests.WebAppManagementTests.test_default_value_port) ... ok
@@ -52,7 +52,7 @@ AssertionError: 'utf-8' != 'cp1251'
 FAIL: test_zero_number (division_tests.WebCalculatorDivisionTests.test_zero_number)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "D:\pycharmPbjects\infotecs_tests\division_tests.py", line 107, in test_zero_number
+  File "D:\pycharmObjects\infotecs_tests\division_tests.py", line 107, in test_zero_number
     self.assertEqual(response_data["statusCode"], 1, "Неверный код ошибки (ожидаемый код ошибки деления на ноль)")
 AssertionError: 8 != 1 : Неверный код ошибки (ожидаемый код ошибки деления на ноль)
 
@@ -60,7 +60,7 @@ AssertionError: 8 != 1 : Неверный код ошибки (ожидаемы�
 FAIL: test_zero_number (remainder_tests.WebCalculatorRemainderTests.test_zero_number)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "D:\pycharmPbjects\infotecs_tests\remainder_tests.py", line 66, in test_zero_number
+  File "D:\pycharmObjects\infotecs_tests\remainder_tests.py", line 66, in test_zero_number
     self.assertEqual(response_data["statusCode"], 1, "Неверный код ошибки (ожидаемый код ошибки деления на ноль)")
 AssertionError: 8 != 1 : Неверный код ошибки (ожидаемый код ошибки деления на ноль)
 
