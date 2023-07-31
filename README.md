@@ -1,6 +1,6 @@
 # infotecs_tests
 
-Запустить тесты:python tests.py
+Запустить тесты: python tests.py
 
 Из библиотек установить только: pip install requests
 
