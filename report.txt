@@ -1,0 +1,76 @@
+(rg) D:\pycharmPbjects\infotecs_tests>python tests.py
+test_change_port (management_tests.WebAppManagementTests.test_change_port) ... ok
+test_default_value_localhost_port (management_tests.WebAppManagementTests.test_default_value_localhost_port) ... ok
+test_default_value_port (management_tests.WebAppManagementTests.test_default_value_port) ... ok
+test_fail_start (management_tests.WebAppManagementTests.test_fail_start) ... ok
+test_help (management_tests.WebAppManagementTests.test_help) ... ok
+test_restart_server (management_tests.WebAppManagementTests.test_restart_server) ... ok
+test_show_logs (management_tests.WebAppManagementTests.test_show_logs) ... ok
+test_start_server (management_tests.WebAppManagementTests.test_start_server) ... ok
+test_stop_server (management_tests.WebAppManagementTests.test_stop_server) ... ok
+test_server_state (state_tests.WebServerStateTests.test_server_state) ... FAIL
+test_invalid_json_format (addition_tests.WebCalculatorAdditionTests.test_invalid_json_format) ... ok
+test_missing_keys_in_request_body (addition_tests.WebCalculatorAdditionTests.test_missing_keys_in_request_body) ... ok
+test_negative_numbers (addition_tests.WebCalculatorAdditionTests.test_negative_numbers) ... ok
+test_non_integer_value_in_request (addition_tests.WebCalculatorAdditionTests.test_non_integer_value_in_request) ... ok
+test_positive_numbers (addition_tests.WebCalculatorAdditionTests.test_positive_numbers) ... ok
+test_value_exceeds_limit (addition_tests.WebCalculatorAdditionTests.test_value_exceeds_limit) ... ok
+test_invalid_json_format (multiplication_tests.WebCalculatorMultiplicationTests.test_invalid_json_format) ... ok
+test_missing_keys_in_request_body (multiplication_tests.WebCalculatorMultiplicationTests.test_missing_keys_in_request_body) ... ok
+test_negative_numbers (multiplication_tests.WebCalculatorMultiplicationTests.test_negative_numbers) ... ok
+test_non_integer_value_in_request (multiplication_tests.WebCalculatorMultiplicationTests.test_non_integer_value_in_request) ... ok
+test_positive_numbers (multiplication_tests.WebCalculatorMultiplicationTests.test_positive_numbers) ... ok
+test_value_exceeds_limit (multiplication_tests.WebCalculatorMultiplicationTests.test_value_exceeds_limit) ... ok
+test_zero_number (multiplication_tests.WebCalculatorMultiplicationTests.test_zero_number) ... ok
+test_invalid_json_format (division_tests.WebCalculatorDivisionTests.test_invalid_json_format) ... ok
+test_missing_keys_in_request_body (division_tests.WebCalculatorDivisionTests.test_missing_keys_in_request_body) ... ok
+test_negative_numbers (division_tests.WebCalculatorDivisionTests.test_negative_numbers) ... ok
+test_non_integer_value_in_request (division_tests.WebCalculatorDivisionTests.test_non_integer_value_in_request) ... ok
+test_positive_numbers (division_tests.WebCalculatorDivisionTests.test_positive_numbers) ... ok
+test_value_exceeds_limit (division_tests.WebCalculatorDivisionTests.test_value_exceeds_limit) ... ok
+test_zero_number (division_tests.WebCalculatorDivisionTests.test_zero_number) ... FAIL
+test_invalid_json_format (remainder_tests.WebCalculatorRemainderTests.test_invalid_json_format) ... ok
+test_missing_keys_in_request_body (remainder_tests.WebCalculatorRemainderTests.test_missing_keys_in_request_body) ... ok
+test_negative_numbers (remainder_tests.WebCalculatorRemainderTests.test_negative_numbers) ... ok
+test_non_integer_value_in_request (remainder_tests.WebCalculatorRemainderTests.test_non_integer_value_in_request) ... ok
+test_positive_numbers (remainder_tests.WebCalculatorRemainderTests.test_positive_numbers) ... ok
+test_value_exceeds_limit (remainder_tests.WebCalculatorRemainderTests.test_value_exceeds_limit) ... ok
+test_zero_number (remainder_tests.WebCalculatorRemainderTests.test_zero_number) ... FAIL
+
+======================================================================
+FAIL: test_server_state (state_tests.WebServerStateTests.test_server_state)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\pycharmPbjects\infotecs_tests\state_tests.py", line 21, in test_server_state
+    self.assertEqual(response.encoding, 'cp1251', "Неверная кодировка ответа")
+AssertionError: 'utf-8' != 'cp1251'
+- utf-8
++ cp1251
+ : Неверная кодировка ответа
+
+======================================================================
+FAIL: test_zero_number (division_tests.WebCalculatorDivisionTests.test_zero_number)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\pycharmPbjects\infotecs_tests\division_tests.py", line 107, in test_zero_number
+    self.assertEqual(response_data["statusCode"], 1, "Неверный код ошибки (ожидаемый код ошибки деления на ноль)")
+AssertionError: 8 != 1 : Неверный код ошибки (ожидаемый код ошибки деления на ноль)
+
+======================================================================
+FAIL: test_zero_number (remainder_tests.WebCalculatorRemainderTests.test_zero_number)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\pycharmPbjects\infotecs_tests\remainder_tests.py", line 66, in test_zero_number
+    self.assertEqual(response_data["statusCode"], 1, "Неверный код ошибки (ожидаемый код ошибки деления на ноль)")
+AssertionError: 8 != 1 : Неверный код ошибки (ожидаемый код ошибки деления на ноль)
+
+----------------------------------------------------------------------
+Ran 37 tests in 234.873s
+
+FAILED (failures=3)
+
+===== Результаты тестов =====
+Всего тестов: 37
+Успешных: 34
+Неудачных: 3
+Тесты не были пройдены. Проверьте ошибки и неудачные тесты.
